@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    
+  }
+
+/*nav*/
+
+nav{
+    background:crimson;
+    height: 80px;
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+    color:darkslategrey;
+    padding: 0;
+    margin: 0;
+}
+
+label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+    list-style: none;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+a.active,a:hover{
+    background: red;
+    transition: .5s;
+
+}
+.checkbtn{
+   font-size: 30px;
+   float: right;
+   line-height: 80px;
+   margin-right: 40px;
+   cursor:pointer;
+   display: none;
+}
+#check{
+    display: none;
+}
+@media ( max-width: 1200px){
+    header{
+        z-index: 100;
+    }
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+@media ( max-width: 1120px){
+
+    header{
+        z-index: 100;
+    }
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: lightcoral;
+        top: 80px;
+        left: -120%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover,a.active{
+        background: none;
+        color: red;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    } 
+}
+
+header{
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+}
+
+.content{
+    padding-top: 130px;  
+    background-image: url(img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+.container_bar{
+    
+    top: 12%;
+    width: 100%;
+}
+
+.ticker {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 60px;
+    margin: 0 auto;
+}
+.news {
+    width: 80%;
+    background: #ff3232;
+    height: 65%;
+}
+
+.news pre{
+    margin-top: 8px;
+    font-size: large;
+    color: black;
+}
+
+.title {
+    width: 20%;
+    text-align: center;
+    background: #c81c1c;
+    position: relative;
+    height: 65%;
+}
+.title:after {
+    position: absolute;
+    content: "";
+    right: -16%;
+    border-left: 20px solid #c81c1c;
+    border-right: 20px solid transparent;
+}
+.title h5 {
+    font-size: 15px;
+    margin-top: 10px;
+    color: rgb(255, 255, 255);
+}
+.news marquee {
+    font-size: 15px;
+}
+
+
+
+.grande{
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(0, 0, 0, 0.4)
+}
+
+.columna1{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.columna2{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    padding-left: 40px;
+}
+
+.item{
+    padding: 20px;
+}
+
+.tittle{
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+}
+
+.item img{
+    padding-top: 15px;
+    height: 200px;
+    width: 275px;
+    padding-bottom: 0px;
+}
+
+.address{
+    text-align: left;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    color: white;
+}
+
+.img_desc{
+    display: flex;
+}
+
+.img_desc p{
+    margin-left: 3%;
+    padding-top: 50px;
+    text-align: justify;
+    color: white;
+
+}
+
+table, th, td{
+    border: 1px solid black;
+    text-align: center;
+    border-collapse: collapse;
+    color: black;
+    background-color: white;
+}
+
+th{
+    width: 155px;
+}
+
+td{
+    width: 70px;
+}
+
+.left{
+    color: white;
+    background-color: #c81c1c;;
+}
+
+.days{
+    color: white;
+    background-color: crimson;
+}
+
+.address_box{
+    display: flex;
+}
+
+.address_box img{
+    padding-right: 10px;
+    padding-bottom: 10px;
+    height: 30px;
+    width: 30px;
+    filter: invert(1);
+}
+
+
+@media ( max-width: 800px){
+    .grande{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .img_desc{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+
+@media ( max-width: 430px){
+
+    label.logo{
+        font-size: 20px;
+        padding-left: 20px;
+        position: fixed
+    }
+}
+
+
+
+

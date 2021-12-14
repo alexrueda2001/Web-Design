@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400&display=swap');
+*{
+    font-family: 'Raleway', sans-serif;
+    color:darkslategrey;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+   }
+
+#blockContent{
+    padding-top: 90px;
+}
+
+
+
+nav{
+    background:crimson;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+}
+label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+}
+
+body{
+
+    background-image: url(img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+}
+
+#blockContent{
+    background-color: rgba(0, 0, 0, 0.4)
+}
+
+.sub-menu ul{
+    width: 115px;
+    background: crimson;
+    display: none;
+}
+
+.sub-menu ul li{
+    width: 100%;
+}
+
+.main-menu ul li:hover .sub-menu ul{
+    display: block;
+    position: absolute;
+    background:crimson;
+}
+
+.main-menu ul li:hover .sub-menu ul li a:hover
+{
+    color: rgb(0, 0, 0);
+}
+
+a.active,a:hover{
+    background: red;
+    transition: .5s;
+
+}
+
+.row{
+    float: left;
+    overflow: hidden;
+}
+
+.row h2 strong{
+    margin-top: 10px;
+    color: black;
+}  
+
+.row::after {
+    content: "";
+    clear: both;
+  }
+
+
+.divticket{
+    margin-top: 10px;
+    overflow: hidden;
+    width: auto;
+}
+
+.divticket h1 strong{
+    color: rgb(255, 255, 255);
+    margin-left: 40px;
+    text-size-adjust: 50px;
+}
+
+.divticket ul li{
+    color: white;
+    margin-left: 85px;
+    margin-top: 10px;
+}
+
+.divticket p {
+    color:white;
+    margin-top: 12px;
+    margin-left: 50px;
+    margin-right: 20px;
+}
+
+.divticket p strong{
+    color: rgb(255, 255, 255);
+}
+
+.divticket ul li strong{
+    color: crimson;
+}
+
+.divfood{
+    overflow: hidden;
+    margin-top: 10px;
+  }
+
+#food {
+    width: auto;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    background:rgb(255, 255, 221);
+    background-repeat: no-repeat;
+    overflow: hidden;
+    margin-bottom: 10px;
+  } 
+  
+.divfood img {
+    float: left;
+    margin-top: 8px;
+  }
+
+#food h2{
+    margin-left: 15px;
+    margin-top: 5px;
+}
+
+.divfood p{
+    margin-top: 20px;
+    margin-left: 8px;
+}
+
+.divparking{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    width: auto;
+}
+
+.divparking h1 strong{
+    color: rgb(255, 255, 255);
+    margin-left: 40px;
+    text-size-adjust: 50px;
+}
+
+.divparking ul li{
+    color: white;
+    margin-left: 85px;
+    margin-top: 10px;
+}
+
+.divparking p {
+    color:white;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 20px;
+}
+
+.divparking p strong{
+    color: rgb(255, 255, 255);
+}
+
+.divparking ul li strong{
+    color: crimson;
+}
+
+.checkbtn{
+   font-size: 30px;
+   float: right;
+   line-height: 80px;
+   margin-right: 40px;
+   cursor:pointer;
+   display: none;
+}
+#check{
+    display: none;
+}
+
+.vc_empty_space {
+    border-top: 1.5px solid rgb(255, 255, 255);
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 40px;
+    width: 95%;
+    overflow: hidden;
+}
+
+@media ( max-width: 1440px){
+    #food{
+        float: left;
+        margin-top: 50px;
+        margin-left: 40px;
+    }
+    .checkbtn{
+        display: block;
+    }
+    .main-menu{
+        position: fixed;
+
+    }
+    nav ul{
+        position:fixed;
+        width: 100%;
+        height: 100vh;
+        background: lightcoral;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+
+    a:hover,a.active{
+        background: none;
+        color: red;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+
+    .sub-menu ul{
+        top: 0;
+        left: auto;
+        height: 350px;
+        text-align: center;  
+    }
+    .vc_empty_space {
+        margin-right: 50px;
+        margin-top: 900px;
+        width: 75%;
+    }
+}
+
+@media ( max-width: 952px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+
+}
+
+@media ( max-width: 858px){
+    
+    .divticket{
+        margin-top: 50px;
+    }
+
+    .vc_empty_space {
+        margin-right: 50px;
+        margin-top: 1000px;
+        width: 75%;
+    }
+}
+
+@media ( max-width: 588px){
+    
+    .divticket{
+        font-size: 15px;
+    }
+
+    .vc_empty_space {
+        margin-right: 50px;
+        margin-top: 900px;
+        width: 75%;
+    }
+    .vc_empty_space {
+        margin-right: 50px;
+        margin-top: 1000px;
+        width: 75%;
+    }
+}
+
+    @media ( max-width: 430px){
+
+        label.logo{
+            font-size: 20px;
+            padding-left: 20px;
+            position: fixed
+        }
+    }
+
